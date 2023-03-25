@@ -13,5 +13,5 @@ app.get('/', (req, res) => {
 
 
 app.listen(4000, () => {
-    console.log('server is listening on port 3k')
+    console.log('server is listening on port 4k')
 })
