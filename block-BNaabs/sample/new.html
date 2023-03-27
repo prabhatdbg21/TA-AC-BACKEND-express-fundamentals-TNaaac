@@ -1,46 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Book List</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="stylesheets/style.css" />
-  </head>
-  <body>
-    <div class="container">
-        <header>
-            <p> <span><i class="fa fa-book-open"></i></span>   My<span>Book</span>List</p>
-        </header>
-        <main>
-            <section>
-                <div >
-                    <label for="title">Title</label>
-                    <input id="title" type="text">
-                </div>
-                <div >
-                    <label for="author">Author</label>
-                    <input id="author" type="text">
-                </div>
-                <div >
-                    <label for="isbn">ISBN</label>
-                    <input id="isbn" type="text">
-                </div>
-                <button>
-                    Add Book
-                </button>
-                <hr>
-                <h3>
-                    <span>Title</span>
-                    <span>Author</span>
-                    <span>ISBN#</span>
-                </h3>
-                <ul class="books">
-                    
-                </ul>
-                <img src="media/team1.jpg" alt="">
-            </section>
-        </main>
-    </div>
-  </body>
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+</head>
+<body>
+    <form action="/new" method="post">
+        <input type="text" name="username" placeholder="add name">
+        <input type="text" name="email" placeholder="add email">
+        <input type="submit" value="Add User">
+    </form>
+</body>
 </html>

@@ -4,9 +4,13 @@ var logger = require('morgan')
 
 var app = express();
 
+// middleware
+app.use(express.json()); 
+app.use(express.urlencoded({extended: false}));
+app.use(express.static(__dirname + "/public"));  
+app.use(logger('dev'));
 
-app.use(logger('dev'))
-
+// routes
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/index.html")
 })
@@ -16,11 +20,12 @@ app.get('/new', (req, res) => {
 })
 
 app.post('/new', (req,res) => {
-
+    // console.log(req.body)
+    res.json(req.body);
 })
 
-app.get('/users/:asdf', (req, res) => {
-    var username = req.params.asdf;
+app.get('/users/:username', (req, res) => {
+    var username = req.params.username;
     res.send(username);
 })
 
