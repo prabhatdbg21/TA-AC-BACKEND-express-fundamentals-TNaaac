@@ -2,8 +2,8 @@ writeCode
 
 Q. Create a scaffold express application from the scratch with necessary middlewares and routes
 
-- add package.json
-- install express and create an express server listening on port 4000
+- add package.json // npm init -y
+- install express and create an express server listening on port 4000 // npm install express --save
 - add middlewares for capturing form/json data
 - add middleware for handling static assets
 - add third party mddleware for logging and handling cookies
