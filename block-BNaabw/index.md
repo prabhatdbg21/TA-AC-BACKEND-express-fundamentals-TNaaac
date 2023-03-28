@@ -6,7 +6,8 @@ Q. Create a scaffold express application from the scratch with necessary middlew
 - install express and create an express server listening on port 4000 // npm install express --save
 - add middlewares for capturing form/json data
 - add middleware for handling static assets
-- add third party mddleware for logging and handling cookies
+- add third party mddleware for logging and handling cookies   // npm i morgan --save    // npm i cookie-parser --save
+                                                                OR   // npm i morgan cookie-parser --save  
 - add 2 sample routes with some random response of your choice
 
   1. GET -> `/` route
