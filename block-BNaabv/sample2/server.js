@@ -7,9 +7,10 @@ var app = express();                         // setup an express server
 // middleware
 app.use(express.json());                           // to capture form data from request
 app.use(express.urlencoded({extended: false}));    // to capture json data from request
-app.use(logger('dev'))                             // logger middleware
+app.use(logger('dev'));                            // logger middleware
 app.use(cookieParser());                           // cookieParser middleware
 
+/*
 app.use((req, res, next) => {                      // add a middleware to send cookie to the client.    
     var count = req.cookies.count;
     if(count) {
@@ -22,31 +23,39 @@ app.use((req, res, next) => {                      // add a middleware to send c
     next()
 })
 
-app.use('/admin', (req, res, next) => {
-    next("Unauthorized User")
+OR
+*/
+
+app.use((req, res, next) => {                           // add a middleware to send cookie to the client.  
+    res.cookie("username", "xyz");
+    next();
 })
+
+app.use('/admin', (req, res, next) => {               // for 500 error
+    next("Unauthorized User");
+});
 
 // routes
 app.get('/', (req, res) => {                     // GET -> `/` with HTML response saying 'Welcome to express' in H2.
-    res.send('<h2> Welcome to express </h2>')
-})
+    res.send('<h2> Welcome to express </h2>');
+});
 
 app.get('/about', (req,res) => {                 // GET -> `/about` with plain text content saying 'My name is qwerty'
-    res.send('My name is PRABHAT')
-})
+    res.send('My name is PRABHAT');
+});
 
 app.post('/form', (req, res) => {      // add POST request on `/form` route to capture form data from postman and send entire form data through response in json format
-    console.log(req.body);
-})
+    res.json(req.body);
+});
 
 app.post('/json', (req, res) => {      // add POST request on `/json` route to capture JSON data from postman and send entire data in response in plain text format.
-    console.log(req.body);
-})
+    res.json(req.body);
+});
 
 app.get('/users/:username', (req, res) => {  // a router to capture params from the request on a route `/users/:username` using GET request.
     var username = req.params.username; 
     res.send (`<h2> ${username} </h2>`) ;  // capture the username and respond with username in HTML response.
-})
+});
 
 
 // Error handler middlewares
