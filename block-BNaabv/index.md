@@ -8,14 +8,14 @@ Q. Create a package.json file manually with
 
 Q. Create a package.json with using npm init script with above content
 
-- add express package with exact version of 4.16.4
-- upgrade it to the latest version
+- add express package with exact version of 4.16.4  
+- upgrade it to the latest version    // npm update
 
 Q. Create a basic express server with 2 routes
 
-- add package.json
-- install express
-- setup an express server
+- add package.json  // npm init -y  
+- install express   // npm install express --save
+- setup an express server  
 - add a listener on port 3000
 - handle these routes
   1. GET -> `/` with HTML response saying 'Welcome to express' in H2.
@@ -38,8 +38,8 @@ Remember to add middlewares before handling any routes.
 
 Q. Modify above application to include
 
-- logger middleware
-- cookieParser middleware
+- logger middleware   // npm i morgan --save    
+- cookieParser middleware  // npm i cookie-parser --save
 - add a middleware to send cookie to the client.
 
 Q. Modify above application to include
