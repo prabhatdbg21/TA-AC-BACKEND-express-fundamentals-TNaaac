@@ -1,0 +1,20 @@
+{
+  "name": "ta-ac-backend-express-fundamentals-tnaaac",
+  "version": "1.0.0",
+  "description": "TA-C-BACKEND-express-fundamentals-TNaaac",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prabhatdbg21/TA-AC-BACKEND-express-fundamentals-TNaaac.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prabhatdbg21/TA-AC-BACKEND-express-fundamentals-TNaaac/issues"
+  },
+  "homepage": "https://github.com/prabhatdbg21/TA-AC-BACKEND-express-fundamentals-TNaaac#readme"
+}
